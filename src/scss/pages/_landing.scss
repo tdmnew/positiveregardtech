@@ -1,0 +1,26 @@
+.hero {
+    height: 86.5vh;
+    background: linear-gradient(to bottom, rgba(30, 33, 43, 1), rgba(30, 33, 43, .6)), url("../images/happypeople.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%);
+
+    &__container {
+        @include container;
+
+        &__text {
+            &__heading {
+                font-size: 30px;
+                font-weight: 500;
+            }
+
+            &__subheading {
+                font-size: 25px;
+                font-weight: 200;
+            }
+        }
+    }
+}

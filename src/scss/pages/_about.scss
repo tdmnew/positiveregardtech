@@ -1,0 +1,113 @@
+%inner {
+    width: 55rem;
+    height: 20vh;
+    padding: .5rem;
+
+    @media(max-width: 920px) {
+        width: auto;
+        height: auto;
+    }
+}
+
+.about {
+    height: 105vh;
+    
+    @media only screen and (max-device-width: 920px) {
+        height: 190vh;
+    }
+
+    @media screen and (max-width: 920px) {
+        height: 170vh;
+    }
+
+    @media only screen and (max-device-width: 420px) {
+        height: 210vh;
+    }
+
+    @media screen and (max-width: 420px) {
+        height: 170vh;
+    }
+
+    &__container {
+        @include container(105vh, inherit);
+
+        @media only screen and (max-device-width: 920px) {
+            height: 190vh;
+        }
+
+        @media screen and (max-width: 920px) {
+            height: 170vh;
+        }
+
+        @media only screen and (max-device-width: 420px) {
+            height: 210vh;
+        }
+
+        @media screen and (max-width: 420px) {
+            height: 170vh;
+        }
+
+        &__header {
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            font-size: 25px;
+        }
+       
+        &__prt {
+            @extend %inner;
+
+            &--header {
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+
+        &__me {
+            @extend %inner;
+
+            &--header {
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+
+        &__skills {
+            display: flex;
+            flex-direction: row;
+            margin: 5rem 0;
+
+            @media(max-width: 920px) {
+                flex-direction: column;
+                margin: 2rem 0;
+            }
+            
+            &__icon {
+                width: 85px;
+                height: 65px;
+            }
+    
+            &__icons {
+                display: flex;
+                justify-content: center;
+            }
+
+
+            &__title {
+                @extend %card-title;                    
+            }
+
+            &__list {
+            }
+
+            &--frontend, &--server, &--devops {
+                @extend %card;
+
+                &:hover {
+                    background: #2d313c;
+                    transition: .5s;
+                }
+            }
+        }
+    }
+}

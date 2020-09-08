@@ -1,0 +1,49 @@
+.header {
+    margin: 0 auto;
+    width: 60rem;
+    height: 7rem; 
+
+    @media(max-width: 980px) {
+        width: auto;
+    }
+
+    &__logo {
+        display: inline-block;
+        // https://codepen.io/sosuke/pen/Pjoqqp 
+        &__icon {
+            position: relative;
+            filter: invert(80%) sepia(80%) saturate(4167%) hue-rotate(358deg) brightness(101%) contrast(103%);
+            width: 3.5rem;
+            left: 105%;
+            transform: translateY(-100%);
+
+            @media(max-width: 400px) {
+                display: none;
+            }
+        }
+        &__heading {
+        }
+
+        &__subheading {
+            float: right;
+            position: relative;
+            transform: translateY(-90%);
+        }
+    }
+
+    &__nav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        position: relative;
+        float: right;
+        transform: translateY(200%);
+
+        &__item {
+            display: inline;
+            padding: 0 1rem;
+        }
+    }
+}
+

@@ -1,0 +1,66 @@
+.selected-work {
+    background: linear-gradient(to bottom, rgba(30, 33, 43, 1), rgba(30, 33, 43, .75)), url("../images/code.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    height: 70vh;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%);
+
+    @media(max-width: 920px) {
+        height: 110vh;
+    }
+    &__container {
+        @include container(70vh, inherit);
+                
+        @media(max-width: 920px) {
+            height: 100vh;
+        }
+
+        &__work {
+            display: flex;
+            flex-direction: row;
+            margin: 5rem 0;
+
+            @media(max-width: 920px) {
+                flex-direction: column;
+                margin: 2rem 0;
+            }
+
+            &--insightstation {
+                background: url("../images/insightstation.png"); 
+            }
+
+            &--chalettoitrouge {
+                background: url("../images/chalettoitrouge.png");
+            }
+
+            &--github {
+                background: url("../images/github.png");
+            }
+
+            &--insightstation, &--chalettoitrouge, &--github {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+                @extend %card;
+            }
+
+            &--insightstation:hover, &--chalettoitrouge:hover, &--github:hover {
+                transition: .5s;
+                box-shadow: inset 0 0 0 1000px rgba(0,0,0,.3);
+                cursor: pointer;
+            }
+
+            &__title {
+                @extend %card-title;
+                position: relative;
+                top: 50%;
+                transform: translateY(-100%);
+            }
+        }
+    }
+}

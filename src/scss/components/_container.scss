@@ -1,0 +1,49 @@
+@mixin container($height: 50vh, $top: center) {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 55rem;
+    height: $height;
+    justify-content: $top;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 .5rem 0 .5rem;    
+
+    @media(max-width: 920px) {
+        width: 47.5rem;
+    }
+
+    @media(max-width: 800px) {
+        width: 45rem;
+    }
+
+    @media(max-width: 750px) {
+        width: 40rem;
+    }
+
+    @media(max-width: 700px) {
+        width: 32rem;
+    }
+
+    @media(max-width: 650px) {
+        width: 28rem;
+    }
+
+    @media(max-width: 550px) {
+        width: 25rem;
+    }
+
+    @media(max-width: 420px) {
+        width: 20rem;
+    }
+
+    @media(max-width: 400px) {
+        width: 20rem;
+    }
+
+    @media(max-width: 350px) {
+        width: 18rem;
+    }
+}
