@@ -1,48 +1,66 @@
 .header {
-    margin: 0 auto;
-    width: 60rem;
-    height: 7rem; 
-
-    @media(max-width: 980px) {
-        width: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; 
+    
+    @media(max-width: 1000px) {
+        grid-template-columns: 1fr 10fr 1fr; 
     }
 
-    &__logo {
-        display: inline-block;
-        // https://codepen.io/sosuke/pen/Pjoqqp 
-        &__icon {
-            position: relative;
-            filter: invert(80%) sepia(80%) saturate(4167%) hue-rotate(358deg) brightness(101%) contrast(103%);
-            width: 3.5rem;
-            left: 105%;
-            transform: translateY(-100%);
+    &--inner {
+        grid-column: 2;
+        margin: 0 auto;
+        width: 60rem;
+        height: 7rem; 
 
-            @media(max-width: 400px) {
-                display: none;
+        @media(max-width: 1000px) {
+            width: auto;
+        }
+
+        &__logo {
+            display: inline-block;
+            // https://codepen.io/sosuke/pen/Pjoqqp 
+
+            &__icon {
+                position: relative;
+                filter: invert(80%) sepia(80%) saturate(4167%) hue-rotate(358deg) brightness(101%) contrast(103%);
+                width: 3.5rem;
+                left: 105%;
+                transform: translateY(-100%);
+
+                @media(max-width: 1000px) {
+                    display: none;
+                }
+            }
+            &__heading {
+                font-size: 30px;
+                @media(max-width: 420px) {
+                    font-size: 25px;
+                }
+            }
+            &__subheading {
+                padding: 0;
+                float: right;
+                position: relative;
+                transform: translateY(-90%);
             }
         }
-        &__heading {
-        }
 
-        &__subheading {
-            float: right;
+        &__nav {
+            @media(max-width: 1000px) {
+                display: none;
+            }
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
             position: relative;
-            transform: translateY(-90%);
-        }
-    }
+            float: right;
+            transform: translateY(200%);
 
-    &__nav {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: inline-block;
-        position: relative;
-        float: right;
-        transform: translateY(200%);
-
-        &__item {
-            display: inline;
-            padding: 0 1rem;
+            &__item {
+                display: inline;
+                padding: 0 1rem;
+            }
         }
     }
 }

@@ -18,13 +18,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700&display=swap');
 
 body {
-    min-height: 100vh;
     color: $primary;
-    background: $background;
     font-family: 'Raleway', sans-serif;
+    background: $background;
 }
 
 a {
     color: $primary;
     text-decoration: none;
 }
+
+p, span {
+    padding: .5rem;
+}
+
+span {
+    font-size: 18px;
+}
+

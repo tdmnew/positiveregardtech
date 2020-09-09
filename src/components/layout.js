@@ -14,6 +14,7 @@ import Header from "./header"
 import Hero from "../pages/hero";
 import About from "../pages/about";
 import SelectedWork from "../pages/selectedWork";
+import Contact from "../pages/contact";
 
 //import "./layout.css"
 
@@ -39,6 +40,7 @@ const Layout = ({ children }) => {
             <Hero/>
             <About/>
             <SelectedWork/>
+            <Contact/>
         </main>
 
       </div>
